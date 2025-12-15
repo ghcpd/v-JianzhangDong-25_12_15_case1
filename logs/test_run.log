@@ -1,0 +1,18 @@
+Starting project...
+App output: Service started successfully
+Port: 9123
+
+App errors: 
+App return code: 0
+
+Running tests...
+Running tests/case_1.test_app_starts...
+Test passed.
+
+Running tests/case_2.test_output_contains_port...
+Test passed.
+
+Running tests/case_3.test_correct_port...
+Test passed.
+
+All tests completed.
