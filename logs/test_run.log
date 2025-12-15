@@ -1,0 +1,36 @@
+
+==== Running tests\case_1.py ====
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.0.2, pluggy-1.6.0
+rootdir: D:\projects\v-JianzhangDong_25_12_15_case1\fast-oswe-1206\v-JianzhangDong-25_12_15_case1
+collected 1 item
+
+tests\case_1.py .                                                        [100%]
+
+============================== 1 passed in 0.12s ==============================
+
+
+==== Running tests\case_2.py ====
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.0.2, pluggy-1.6.0
+rootdir: D:\projects\v-JianzhangDong_25_12_15_case1\fast-oswe-1206\v-JianzhangDong-25_12_15_case1
+collected 1 item
+
+tests\case_2.py .                                                        [100%]
+
+============================== 1 passed in 0.12s ==============================
+
+
+==== Running tests\case_3.py ====
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.0.2, pluggy-1.6.0
+rootdir: D:\projects\v-JianzhangDong_25_12_15_case1\fast-oswe-1206\v-JianzhangDong-25_12_15_case1
+collected 1 item
+
+tests\case_3.py .                                                        [100%]
+
+============================== 1 passed in 0.11s ==============================
+
+
+
+Exit code: 0

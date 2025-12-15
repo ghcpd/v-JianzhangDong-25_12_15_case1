@@ -1,0 +1,15 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "file": "README.md",
+      "line_numbers": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80],
+      "original": "",
+      "updated": "# Project Overview\n\nThis repository contains a minimal Python service (`app.py`) that demonstrates a simple configuration loader and a basic runtime check.\n\n## Project Structure\n\n- `app.py` - Application entry point that reads configuration and validates the environment before starting.\n- `config.py` - Loads configuration from `settings.yaml` and environment variables.\n- `settings.yaml` - Default settings (port).\n- `requirements.txt` - Python dependencies.\n- `tests/` - Test scripts to validate app behavior.\n\n## Prerequisites\n\n- **Python 3.8+** installed and available in your PATH.\n- A working network connection to install dependencies from PyPI.\n\n## Setup and Installation\n\n1. **Create a clean virtual environment** (do not reuse an existing env):\n\n   ```powershell\n   # From the project root\n   python -m venv .venv\n   .\.venv\Scripts\Activate.ps1  # PowerShell\n   # or .\.venv\Scripts\activate.bat for CMD\n   ```\n\n2. **Install dependencies** using the project's `requirements.txt`:\n\n   ```powershell\n   pip install -r requirements.txt\n   ```\n\n3. **Set the required environment variable** to `production` before running the app:\n\n   ```powershell\n   $Env:APP_MODE = "production"  # PowerShell\n   # or set APP_MODE=production in your shell\n   ```\n\n## Running the Application\n\n```powershell\npython app.py\n```\n\nYou should see output similar to:\n\n```
+Service started successfully
+Port: 9123
+```\n\n## Running Tests\n\nThe tests are located under the `tests/` folder and can be executed using Python (they use `subprocess` to run `app.py`).\n\nTo run them locally:\n\n```powershell\npython -m pytest tests\n```\n\nOr run the provided `auto_test.py` script (see next section).\n\n## Auto-test script\n\nRun the automated test runner that uses the virtual environment to execute the tests and writes results to a log file:\n\n```powershell\npython auto_test.py\n```\n\nLogs will be written to `logs/test_run.log`.\n\n## Notes\n\n- This project expects an environment variable `APP_MODE` set to `production` for `app.py` to start successfully.\n- If you are on Windows cmd or other shells, adapt the activation and environment variable commands accordingly.",
+      "fix_explanation": "Updated README.md to reflect the actual project structure and usage (env var APP_MODE, virtual environment creation, running app and tests), and added usage examples and auto-test instructions."
+    }
+  ]
+}
