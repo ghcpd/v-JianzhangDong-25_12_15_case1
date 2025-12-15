@@ -1,0 +1,52 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "file": "README.md",
+      "line_numbers": [12],
+      "original": "python -m venv venv",
+      "updated": "python -m venv .venv",
+      "fix_explanation": "Changed virtual environment directory from 'venv' to '.venv' for consistency with .gitignore and to follow Python conventions. The .venv directory is better hidden and less likely to be tracked in version control."
+    },
+    {
+      "id": 2,
+      "file": "README.md",
+      "line_numbers": [13],
+      "original": "venv\\Scripts\\activate",
+      "updated": ".venv\\Scripts\\activate",
+      "fix_explanation": "Updated the activation command to use the new .venv directory path."
+    },
+    {
+      "id": 3,
+      "file": "README.md",
+      "line_numbers": [17],
+      "original": "pip install -r requirements.txt",
+      "updated": "python -m pip install -r requirements.txt",
+      "fix_explanation": "Changed to use 'python -m pip' instead of just 'pip' to ensure the correct pip from the virtual environment is used and to be more explicit about the Python interpreter."
+    },
+    {
+      "id": 4,
+      "file": "README.md",
+      "line_numbers": [20, 21, 22, 23],
+      "original": "copy .env.example .env\n\nEdit .env and set the following values:\nAPP_ENV=dev\nPORT=8000\nDEBUG=true",
+      "updated": "Create a `.env` file or set the environment variable:\n\nset APP_MODE=production\n\nNote: The application requires:\n- `APP_MODE=production` (required environment variable)\n- Port is configured in `settings.yaml` (default: 9123)",
+      "fix_explanation": "Fixed incorrect environment variable names. The application requires 'APP_MODE' (not 'APP_ENV'), and the port is configured in settings.yaml (9123), not via environment variable. Removed unused 'DEBUG' variable."
+    },
+    {
+      "id": 5,
+      "file": "README.md",
+      "line_numbers": [26],
+      "original": "python main.py",
+      "updated": "python app.py",
+      "fix_explanation": "Changed entry point from 'main.py' (which doesn't exist) to 'app.py' (the actual application file)."
+    },
+    {
+      "id": 6,
+      "file": "README.md",
+      "line_numbers": [29, 30, 31],
+      "original": "Open your browser and visit:\nhttp://localhost:8000\nIf the page loads successfully, the service has started correctly.",
+      "updated": "You should see output similar to:\nService started successfully\nPort: 9123",
+      "fix_explanation": "Corrected verification instructions. The application is not an HTTP server - it's a service that validates configuration and outputs messages to stdout. Users should see the console output showing the port (9123) from settings.yaml, not try to access an HTTP endpoint."
+    }
+  ]
+}
