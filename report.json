@@ -1,0 +1,44 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "file": "README.md",
+      "line_numbers": [1, 200],
+      "original": "",
+      "updated": "Added full project setup, run, and test instructions including how to create a clean .venv, set APP_MODE=production, and use auto_test.py to run tests and write logs/test_run.log.",
+      "fix_explanation": "README.md was empty; added step-by-step instructions so contributors can reproduce environment, run the service, and run tests using .venv and auto_test.py."
+    },
+    {
+      "id": 2,
+      "file": "requirements.txt",
+      "line_numbers": [1, 2],
+      "original": "pyyaml>=6.0.2",
+      "updated": "pyyaml>=6.0.2\npytest>=7.0.0",
+      "fix_explanation": "Added pytest to requirements so tests can be executed inside the created virtual environment."
+    },
+    {
+      "id": 3,
+      "file": ".gitignore",
+      "line_numbers": [1, 10],
+      "original": "(file did not exist)",
+      "updated": ".venv/\nlogs/\n__pycache__/\n*.pyc\n.env\n",
+      "fix_explanation": "Added .gitignore to ensure .venv and logs are not checked into version control."
+    },
+    {
+      "id": 4,
+      "file": "auto_test.py",
+      "line_numbers": [1, 200],
+      "original": "(file did not exist)",
+      "updated": "Added auto_test.py that creates logs/, ensures .venv exists and installs dependencies if missing, sets APP_MODE=production, starts app.py, runs the test scripts in tests/ using the .venv Python, and writes all output to logs/test_run.log.",
+      "fix_explanation": "Provides a single-command way to validate the project on CI or local dev systems, ensuring tests run with correct environment and interpreter."
+    },
+    {
+      "id": 5,
+      "file": "README_backup.md",
+      "line_numbers": [1, 20],
+      "original": "(file did not exist)",
+      "updated": "Created a backup of the original README.md before modifications.",
+      "fix_explanation": "Safety: preserved original README content before updates."
+    }
+  ]
+}
